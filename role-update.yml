@@ -1,0 +1,18 @@
+---
+- name: Create job template for create-incident
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  collections:
+    - awx.awx
+
+  tasks:
+    - name: Post create-incident job template
+      role:
+        user: student
+        role: execute
+        job_templates:
+          - "1 - Create incident (incident-create.yml)"
+        controller_username: admin
+        controller_password: ansible123!
+        validate_certs: false
