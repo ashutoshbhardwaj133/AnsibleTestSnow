@@ -12,7 +12,7 @@
         user: student
         role: execute
         job_templates:
-          - "1 - Create incident (incident-create.yml)"
+          - "Create incident (incident-create.yml)"
         controller_username: admin
-        controller_password: ansible123!
+        controller_password: ashutosh
         validate_certs: false
