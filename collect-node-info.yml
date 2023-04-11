@@ -1,6 +1,6 @@
 ---
 - name: get node facts for SNOW
-  hosts: nodes
+  hosts: localhost
   vars:
     node_info: []
 
