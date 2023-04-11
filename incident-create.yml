@@ -9,7 +9,7 @@
       servicenow.itsm.incident:
         state: new
         caller: "{{ lookup('env', 'SN_USERNAME') }}"
-        short_description: "User created a new incident using Ansible Automation Platform"
+        short_description: "Deal Archetypes's User created a new incident using Ansible Automation Platform"
         description: "User {{ lookup('env', 'SN_USERNAME') }} successfully created a new incident!"
         impact: low
         urgency: low
