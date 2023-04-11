@@ -44,5 +44,5 @@
       loop: "{{ problem_list }}"
       register: change
 
-    - debug:
-         msg: "A new change request has been created {{ change.record.number }}"
+  #  - debug:
+   #      msg: "A new change request has been created {{ change.record.number }}"
