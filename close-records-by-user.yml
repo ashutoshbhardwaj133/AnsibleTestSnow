@@ -69,7 +69,7 @@
       state: closed
       number: "{{ item.number }}"
       close_code: "Solved (Permanently)"
-      close_notes: "Closed with ansible servicenow.itsm"
+      close_notes: "Closed with Deal Archetypes ansible Automation"
       other:
         active: false
     with_items: "{{ incident_list }}"
