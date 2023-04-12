@@ -86,6 +86,12 @@
     with_items: "{{ problem_list }}"
     when: 
       - problem_list is defined
+      
+  - name: Change state of the change request
+    servicenow.itsm.change_request:
+      state: assess
+      assignment_group: Deal_Archetype
+      number: {{ item.number }}
     
   - name: close change requests from list
     servicenow.itsm.change_request:
