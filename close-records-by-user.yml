@@ -93,7 +93,7 @@
       close_code: "successful"
       close_notes: "Closed with ansible servicenow.itsm"
       number: "{{ item.number }}"
-      assignment_group: "Deal Archetype"
+      assignment_group: Deal_Archetype
       other:
         active: false
     with_items: "{{ change_list }}"
