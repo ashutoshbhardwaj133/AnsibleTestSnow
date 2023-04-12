@@ -37,8 +37,8 @@
         type: normal
         short_description: "Reboot the webserver"
         description: "Just power off the entire rack to be sure"
-        on_hold: true
-        hold_reason: "Wait until after board meeting!"
+  #     on_hold: true
+  #     hold_reason: "Wait until after board meeting!"
         other:
           parent: "{{ item.number }}"
       loop: "{{ problem_list }}"
