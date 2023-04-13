@@ -89,7 +89,29 @@
       
   - name: Change state of the change request
     servicenow.itsm.change_request:
-      state: assess
+      state: scheduled
+      assignment_group: Deal_Archetype
+      number: "{{ item.number }}"
+      other:
+        active: false
+    with_items: "{{ change_list }}"
+    when: 
+      - change_list is defined
+      
+  - name: Change state of the change request
+    servicenow.itsm.change_request:
+      state: implement
+      assignment_group: Deal_Archetype
+      number: "{{ item.number }}"
+      other:
+        active: false
+    with_items: "{{ change_list }}"
+    when: 
+      - change_list is defined
+
+  - name: Change state of the change request
+    servicenow.itsm.change_request:
+      state: review
       assignment_group: Deal_Archetype
       number: "{{ item.number }}"
       other:
@@ -98,18 +120,18 @@
     when: 
       - change_list is defined
     
-#  - name: close change requests from list
-#    servicenow.itsm.change_request:
-#      state: closed
-#      close_code: "successful"
-#      close_notes: "Closed with ansible servicenow.itsm"
-#      number: "{{ item.number }}"
-#      assignment_group: Deal_Archetype
-#      other:
-#        active: false
-#    with_items: "{{ change_list }}"
-#    when: 
-#      - change_list is defined
+  - name: close change requests from list
+    servicenow.itsm.change_request:
+      state: closed
+      close_code: "successful"
+      close_notes: "Closed with ansible servicenow.itsm"
+      number: "{{ item.number }}"
+      assignment_group: Deal_Archetype
+      other:
+        active: false
+    with_items: "{{ change_list }}"
+    when: 
+      - change_list is defined
 
   - name: remove configuration items from list
     servicenow.itsm.configuration_item:
