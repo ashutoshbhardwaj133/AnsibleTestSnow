@@ -124,7 +124,7 @@
     servicenow.itsm.change_request:
       state: closed
       close_code: "successful"
-      close_notes: "Closed with ansible servicenow.itsm"
+      close_notes: "Closed with ansible Deal Archetypes"
       number: "{{ item.number }}"
       assignment_group: Deal_Archetype
       other:
