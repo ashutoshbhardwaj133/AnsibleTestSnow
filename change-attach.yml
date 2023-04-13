@@ -34,7 +34,7 @@
     - name: Create change request for resolving a problem
       servicenow.itsm.change_request:
         state: new
-        type: normal
+        type: standard
         short_description: "Reboot the webserver"
         description: "Just power off the entire rack to be sure"
   #     on_hold: true
