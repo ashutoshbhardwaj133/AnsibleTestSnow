@@ -87,16 +87,16 @@
     when: 
       - problem_list is defined
       
-  - name: Change state of the change request
-    servicenow.itsm.change_request:
-      state: assess
-      assignment_group: Deal_Archetype
-      number: "{{ item.number }}"
-      other:
-        active: false
-    with_items: "{{ change_list }}"
-    when: 
-      - change_list is defined
+#  - name: Change state of the change request
+#    servicenow.itsm.change_request:
+#      state: assess
+#      assignment_group: Deal_Archetype
+#      number: "{{ item.number }}"
+#      other:
+#        active: false
+#    with_items: "{{ change_list }}"
+#    when: 
+#      - change_list is defined
     
   - name: close change requests from list
     servicenow.itsm.change_request:
